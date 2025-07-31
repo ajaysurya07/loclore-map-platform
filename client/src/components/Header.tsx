@@ -49,17 +49,18 @@ const dispatch = useDispatch<AppDispatch>();
   };
 
   return (
-   <main className="top-[0px]">
+   <main className="top-[0px] bg-grey-800 h-[100px] flex-col text-center justify-center">
      <form onSubmit={handleGlobalSearch} className="search-form">
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search any place worldwide..."
+          placeholder="Search place.."
         />
         <button type="submit">Search</button>
       </form>
-            {globalSearchResults?.length > 0 && (
+           <div>
+             {globalSearchResults?.length > 0 && (
               <div className="search-results">
                 {globalSearchResults.map((result, index) => (
                   <div
@@ -79,6 +80,7 @@ const dispatch = useDispatch<AppDispatch>();
                 ))}
               </div>
             )}
+           </div>
    </main>
   )
 }

@@ -12,7 +12,7 @@ function AddFriends({userId} : any) {
   const [generatedRoomId, setGeneratedRoomId] = useState('');
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4">
+    <div className=" bg-gray-100 py-12 px-4">
       <Toaster position="top-center" />
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6">
         <h1 className="text-2xl font-bold text-center text-indigo-600 mb-6">Friend Connect</h1>

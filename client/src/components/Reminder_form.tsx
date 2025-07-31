@@ -67,7 +67,9 @@ const ReminderForm = () => {
   };
 
   return (
-    <main className='absolute top-0 p-4 bg-white rounded-lg shadow-md'>
+    <main 
+    className='w-[500px] bg-white rounded-lg shadow-md'
+    >
       <form onSubmit={handleSubmit} className='space-y-4'>
         <div>
           <label htmlFor="name" className='block mb-1 font-medium'>Reminder Name</label>

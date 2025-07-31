@@ -169,11 +169,12 @@ func Login(c *gin.Context, db *pgxpool.Pool) {
 	).Scan(&userID, &username, &email, &hashedPassword)
 
 	if err != nil {
-		c.JSON(http.StatusUnauthorized, gin.H{ message :  "error": "Invalid email or password" 
+		c.JSON(http.StatusUnauthorized, gin.H{ 
+		"message" :  "Invalid email or password" ,
 		"user" : gin.H{
-			  "success" :  false;
-		}
-		} )
+			  "success" :  false,
+		},
+		}, )
 		return
 	}
 
@@ -201,7 +202,7 @@ func Login(c *gin.Context, db *pgxpool.Pool) {
 			"userName": username,
 			"isAuth":   true,
 		},
-	})
+	},)
 }
 
 

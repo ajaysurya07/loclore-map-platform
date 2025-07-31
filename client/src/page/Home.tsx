@@ -12,11 +12,14 @@ const Home = ({ userDetails }: any) => {
         <User
           userDetails={userDetails}
         />
-      </section>
-      <AddFriends
+      </section >
+      <section   className = "flex  justify-around m-7" >
+ <AddFriends
         userId={userDetails.userId}
       />
       <ReminderForm />
+      </section>
+     
     </main>
   )
 }
